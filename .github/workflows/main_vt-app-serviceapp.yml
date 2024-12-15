@@ -13,9 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:  
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-      DATABASE_URL: jdbc:postgresql://${{ secrets.SUPABASE_URL }}:5432/postgres
+      # SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      # SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      DATABASE_URL: postgresql://postgres.iaexclhghnaqjkbvyxfz:Karyzgrozy50&@aws-0-eu-central-1.pooler.supabase.com:5432/postgres
 
     
       
