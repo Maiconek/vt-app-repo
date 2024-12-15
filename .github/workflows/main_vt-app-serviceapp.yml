@@ -16,6 +16,8 @@ jobs:
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
       DATABASE_URL: jdbc:postgresql://${{ secrets.SUPABASE_URL }}:5432/postgres
+
+    
       
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +27,13 @@ jobs:
         with:
           java-version: '21'
           distribution: 'microsoft'
+
+      - name: Test database connection
+        run: |
+          echo "Testing database connection..."
+          psql -h ${{ secrets.SUPABASE_URL }} -p 5432 -U postgres -d postgres -c "SELECT 1;"
+        env:
+          PGPASSWORD: ${{ secrets.SUPABASE_KEY }}
 
       - name: Build with Maven
         run: |
