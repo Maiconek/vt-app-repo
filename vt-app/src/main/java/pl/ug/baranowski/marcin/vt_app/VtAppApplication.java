@@ -39,7 +39,7 @@ public class VtAppApplication {
 //									.firstname(firstName).lastname(lastName).build();
 //				studentRepository.save(student);
 //			}
-//			Student student = Student.builder().firstname("Waldemar").lastname("Kiepski").build();
+//			Student student = Student.builder().firstname("Ferdynand").lastname("Kiepski").build();
 //			studentRepository.save(student);
 		};
 	}
