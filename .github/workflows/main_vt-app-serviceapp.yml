@@ -12,7 +12,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:  
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      DATABASE_URL: jdbc:postgresql://${{ secrets.SUPABASE_URL }}:5432/postgres
+      
     steps:
       - uses: actions/checkout@v4
 
