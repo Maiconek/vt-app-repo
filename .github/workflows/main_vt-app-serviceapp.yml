@@ -28,13 +28,6 @@ jobs:
           java-version: '21'
           distribution: 'microsoft'
 
-      - name: Test database connection
-        run: |
-          echo "Testing database connection..."
-          psql -h ${{ secrets.SUPABASE_URL }} -p 5432 -U postgres -d postgres -c "SELECT 1;"
-        env:
-          PGPASSWORD: ${{ secrets.SUPABASE_KEY }}
-
       - name: Build with Maven
         run: |
           cd vt-app
