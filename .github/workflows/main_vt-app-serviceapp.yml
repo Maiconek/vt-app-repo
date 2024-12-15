@@ -12,13 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:  
-      # SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      # SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-      DATABASE_URL: postgresql://postgres.iaexclhghnaqjkbvyxfz:Karyzgrozy50&@aws-0-eu-central-1.pooler.supabase.com:5432/postgres
-
-    
-      
+  
     steps:
       - uses: actions/checkout@v4
 
